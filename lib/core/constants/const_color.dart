@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ConstColor {
-  static Color colorBlue = Colors.blue;
+  static Color colorBlue = const Color(0xff4F8FC0);
+  static Color colorBlueSystem = Color(0xff007AFF);
   static Color colorStarYellow = Colors.yellow;
   static Color colorPurple = Colors.purple;
   static Color colorRed = Colors.red;
@@ -9,6 +10,8 @@ class ConstColor {
   static Color colorGreen = Colors.green;
   static Color colorGreenShade50 = Colors.green.shade50;
   static Color colorBlueShade50 = Colors.blue.shade50;
+  static Color colorWhite = Colors.white;
+
   static Color colorDark100 = Colors.black;
   static Color colorDark90 = Colors.black.withOpacity(0.10);
   static Color colorDark80 = Colors.black.withOpacity(0.20);

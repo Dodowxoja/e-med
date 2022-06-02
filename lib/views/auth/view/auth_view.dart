@@ -15,18 +15,18 @@ class AuthView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(child: Image.asset('assets/images/e-med_blue.png')),
+            SizedBox(child: Image.asset('assets/images/e-med_blue_big.png')),
             SizedBox(
-              height: 300,
+              height: 190,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    MyText.authText1,
+                    ConstText.authText1,
                     style: MyTextStyle.myTextStyle(size: 40),
                   ),
                   Text(
-                    MyText.authText2,
+                    ConstText.authText2,
                     style: MyTextStyle.myTextStyle(
                       size: 18,
                       colors: ConstColor.colorDark60,
@@ -42,12 +42,40 @@ class AuthView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      primary: ConstColor.colorBlue,
+                      fixedSize: Size(MediaQuery.of(context).size.width, 54),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
                     child: const Text('Get Started'),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signUp');
+                    },
                   ),
                   ElevatedButton(
-                    child: const Text('Log In'),
-                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      primary: ConstColor.colorWhite,
+                      fixedSize: Size(MediaQuery.of(context).size.width, 54),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        side: BorderSide(
+                          color: ConstColor.colorBlue,
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      'Log In',
+                      style: MyTextStyle.myTextStyle(
+                        colors: ConstColor.colorBlue,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/logIn');
+                    },
                   ),
                 ],
               ),
