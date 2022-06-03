@@ -1,7 +1,7 @@
 import 'package:e_med/views/auth/view/auth_view.dart';
 import 'package:e_med/views/auth/view/log_in_view.dart';
 import 'package:e_med/views/auth/view/sign_up_view.dart';
-import 'package:e_med/views/cart/cart_view.dart';
+import 'package:e_med/views/cart/view/cart_view.dart';
 import 'package:e_med/views/splash/view/splash_view.dart';
 import 'package:flutter/material.dart';
 

@@ -9,4 +9,6 @@ class ConstText {
   static String textSignUp3 = 'Phone number';
   static String textSignUp4 = 'We will send confirmation code to this number';
   static String textSignUp5 = 'Create password';
+
+  static String textLogIn1 = 'Log in to your account';
 }
