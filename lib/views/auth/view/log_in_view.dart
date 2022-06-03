@@ -103,7 +103,8 @@ class LogInView extends StatelessWidget {
           ),
           child: const Text('Log In'),
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/cart');
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/cart', (route) => false);
           },
         ),
       ),

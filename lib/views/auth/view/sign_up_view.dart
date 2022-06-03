@@ -129,7 +129,8 @@ class SignUpView extends StatelessWidget {
           ),
           child: const Text('Continue'),
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/cart');
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/cart', (route) => false);
           },
         ),
       ),
