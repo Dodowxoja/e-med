@@ -28,15 +28,16 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       body: TabBarView(
+        physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
-        children: const [
-          HomeView(), //Home
-          TreatmentsView(), //Treatments
-          DoctorsView(), //Doctors
-          HospitalsView(), //Hospitals
+        children: [
+          HomeView(),
+          TreatmentsView(),
+          DoctorsView(),
+          HospitalsView(),
         ],
       ),
-      floatingActionButton: TabBar(
+      bottomNavigationBar: TabBar(
         indicatorColor: Colors.transparent,
         controller: tabController,
         tabs: [
@@ -47,6 +48,7 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
         ],
         onTap: (v) {
           currentIndex = v;
+          tabController!.index = v;
           setState(() {});
         },
       ),
@@ -57,7 +59,7 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
     return Tab(
       icon: SvgPicture.asset(
         'assets/icons/$iconName.svg',
-        color: currentIndex == numIndex
+        color: tabController!.index == numIndex
             ? ConstColor.colorBlue
             : ConstColor.colorDark60,
       ),
@@ -65,7 +67,7 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
         tabName,
         style: MyTextStyle.myTextStyle(
           size: 12,
-          colors: currentIndex == numIndex
+          colors: tabController!.index == numIndex
               ? ConstColor.colorBlue
               : ConstColor.colorDark60,
         ),
