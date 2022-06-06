@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'e-med',
       theme: ThemeData(primarySwatch: Colors.blue),
       onGenerateRoute: MyRoutes.instanse.onGenerate,
-      initialRoute: '/splash',
+      initialRoute: '/cart',
     );
   }
 }

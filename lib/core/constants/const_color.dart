@@ -11,6 +11,8 @@ class ConstColor {
   static Color colorGreenShade50 = Colors.green.shade50;
   static Color colorBlueShade50 = Colors.blue.shade50;
   static Color colorWhite = Colors.white;
+  static Color colorAppBarBackground = Colors.white;
+  static Color appBarBackgroundColor = const Color(0xFFF9F9F9).withOpacity(0.9);
 
   static Color colorDark100 = Colors.black;
   static Color colorDark90 = const Color(0xFF201D30);
