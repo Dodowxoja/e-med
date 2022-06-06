@@ -109,83 +109,105 @@ class _TreatmentsViewState extends State<TreatmentsView> {
         itemBuilder: (BuildContext context, int index) {
           if (0 == _selectedIndex) {
             //!Current treatment
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: InkWell(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(mockData[0][index]![0].toString()),
-                    Text(mockData[0][index]![1].toString()),
-                    Text(mockData[0][index]![2].toString()),
-                  ],
-                ),
-                onTap: () {},
-              ),
+            return currentTreatment(
+              mockData[0][index]![0].toString(),
+              mockData[0][index]![1].toString(),
+              mockData[0][index]![2].toString(),
             );
           } else if (1 == _selectedIndex) {
             //!Medical history
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(mockData[1][index]![0].toString()),
-                        Text(mockData[1][index]![1].toString()),
-                        Row(
-                          children: [
-                            Text(mockData[1][index]![2].toString()),
-                            Text(mockData[1][index]![3].toString()),
-                          ],
-                        ),
-                      ],
-                    ),
-                    const Icon(Icons.next_plan),
-                  ],
-                ),
-                onTap: () {},
-              ),
+            return medicalHistory(
+              mockData[1][index]![0].toString(),
+              mockData[1][index]![1].toString(),
+              mockData[1][index]![2].toString(),
+              mockData[1][index]![3].toString(),
             );
           } else if (2 == _selectedIndex) {
             //!Drug history
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: InkWell(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(mockData[2][index]![0].toString()),
-                            const Icon(Icons.arrow_back)
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text(mockData[2][index]![1].toString()),
-                            Text(mockData[2][index]![2].toString()),
-                          ],
-                        )
-                      ],
-                    ),
-                    const Icon(Icons.next_plan),
-                  ],
-                ),
-                onTap: () {},
-              ),
+            return drugHistory(
+              mockData[2][index]![0].toString(),
+              mockData[2][index]![1].toString(),
+              mockData[2][index]![2].toString(),
             );
           } else {
             return Container();
           }
         },
         itemCount: mockData[_selectedIndex].length,
+      ),
+    );
+  }
+
+  Padding currentTreatment(name1, name2, name3) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(name1),
+            Text(name2),
+            Text(name3),
+          ],
+        ),
+        onTap: () {},
+      ),
+    );
+  }
+
+  Padding medicalHistory(name1, name2, name3, name4) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(name1),
+                Text(name2),
+                Row(
+                  children: [
+                    Text(name3),
+                    Text(name4),
+                  ],
+                ),
+              ],
+            ),
+            const Icon(Icons.next_plan),
+          ],
+        ),
+        onTap: () {},
+      ),
+    );
+  }
+
+  Padding drugHistory(name1, name2, name3) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [Text(name1), const Icon(Icons.arrow_back)],
+                ),
+                Row(
+                  children: [
+                    Text(name2),
+                    Text(name3),
+                  ],
+                )
+              ],
+            ),
+            const Icon(Icons.next_plan),
+          ],
+        ),
+        onTap: () {},
       ),
     );
   }
