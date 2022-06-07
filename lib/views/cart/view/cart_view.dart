@@ -10,13 +10,13 @@ import 'package:flutter_svg/svg.dart';
 class CartView extends StatefulWidget {
   const CartView({Key? key}) : super(key: key);
 
+  static int currentIndex = 0;
   @override
   State<CartView> createState() => _CartViewState();
 }
 
 class _CartViewState extends State<CartView> with TickerProviderStateMixin {
   TabController? tabController;
-  int currentIndex = 0;
 
   @override
   void initState() {
@@ -31,10 +31,10 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
         children: [
-          HomeView(),
-          TreatmentsView(),
+          const HomeView(),
+          const TreatmentsView(),
           DoctorsView(),
-          HospitalsView(),
+          const HospitalsView(),
         ],
       ),
       bottomNavigationBar: TabBar(
@@ -47,7 +47,7 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
           myTabCart(3, 'hospitals_cart2', 'Hospitals'),
         ],
         onTap: (v) {
-          currentIndex = v;
+          CartView.currentIndex = v;
           tabController!.index = v;
           setState(() {});
         },

@@ -33,9 +33,9 @@ class DoctorInnerPage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       colors: ConstColor.colorDark100,
                     )),
-                Text("Pediatric Pulmonolog", style: MyTextStyle.myTextStyle(
-                  size: 16,colors: ConstColor.colorDark80
-                )),
+                Text("Pediatric Pulmonolog",
+                    style: MyTextStyle.myTextStyle(
+                        size: 16, colors: ConstColor.colorDark80)),
               ],
             ),
           ),
@@ -78,10 +78,10 @@ class DoctorInnerPage extends StatelessWidget {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         elevation: 0,
-                        fixedSize: (const Size(350, 54)),
+                        fixedSize: Size(MediaQuery.of(context).size.width, 54),
                         primary: ConstColor.colorBlue,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       child: Text(
