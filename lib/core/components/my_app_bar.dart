@@ -11,18 +11,20 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   bool? centerTitle;
   BuildContext context;
   List<Widget>? action;
+  double? elevation;
 
-  MyAppBar({
-    Key? key,
-    required this.title,
-    this.centerTitle,
-    this.bottom,
-    this.iconTheme,
-    required this.preferedSizeHeight,
-    this.leading,
-    required this.context,
-    this.action,
-  }) : super(key: key);
+  MyAppBar(
+      {Key? key,
+      required this.title,
+      this.centerTitle,
+      this.bottom,
+      this.iconTheme,
+      required this.preferedSizeHeight,
+      this.leading,
+      required this.context,
+      this.action,
+      this.elevation})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       centerTitle: centerTitle,
       actions: action,
       backgroundColor: ConstColor.appBarBackgroundColor,
-      elevation: 0,
+      elevation: elevation ?? 0,
       titleTextStyle: MyTextStyle.myTextStyle(),
       bottom: bottom,
       iconTheme: iconTheme,

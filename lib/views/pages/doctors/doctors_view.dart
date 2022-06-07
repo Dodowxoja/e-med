@@ -29,31 +29,34 @@ class DoctorsView extends StatelessWidget {
         centerTitle: true,
         context: context,
         preferedSizeHeight: 0.12,
-        leading: const Image(image: AssetImage("assets/images/ellipse.png")),
-        title: SvgPicture.asset("assets/icons/Group 33665.svg"),
+        leading: Image.asset("assets/images/profile1.png"),
+        title: SvgPicture.asset("assets/images/e_med_logo.svg"),
         action: [
           IconButton(
-            icon: SvgPicture.asset("assets/icons/Group 33659.svg"),
+            icon: SvgPicture.asset("assets/icons/filter.svg"),
             onPressed: () {},
           )
         ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(4),
+          preferredSize: const Size.fromHeight(10),
           child: InkWell(
             child: Container(
               height: 36,
               width: 340,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: ConstColor.colorDark60,
+                color: ConstColor.colorSearch,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(Icons.search, color: ConstColor.colorDark60),
+                  Icon(Icons.search, color: ConstColor.colorSearchText),
                   Text(
                     "Search doctors by name or position",
-                    style: MyTextStyle.myTextStyle(),
+                    style: MyTextStyle.myTextStyle(
+                      colors: ConstColor.colorSearchText,
+                      size: 17,
+                    ),
                   ),
                   const SizedBox(width: 5),
                 ],
@@ -67,50 +70,77 @@ class DoctorsView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Divider(thickness: 0.5, color: ConstColor.colorDark60),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Text(
-              "Recommended doctors for you",
-              style: MyTextStyle.myTextStyle(),
-            ),
-          ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.6,
+            height: MediaQuery.of(context).size.height * 0.73,
             child: ListView.builder(
               itemBuilder: (context, __) => InkWell(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: ConstColor.colorDark60,
-                  ),
-                  title: Text(
-                    mockDataDotors[__]["name"].toString(),
-                    style: MyTextStyle.myTextStyle(),
-                  ),
-                  subtitle: Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          mockDataDotors[__]["jobs"].toString(),
-                          style: MyTextStyle.myTextStyle(),
+                child: Column(
+                  children: [
+                    mockDataDotors[__] == mockDataDotors[0]
+                        ? Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Text(
+                              "Recommended doctors for you",
+                              style: MyTextStyle.myTextStyle(
+                                colors: ConstColor.colorDark60,
+                                size: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          )
+                        : const SizedBox(),
+                    mockDataDotors[__] == mockDataDotors[4]
+                        ? Padding(
+                            padding: const EdgeInsets.only(
+                              top: 20,
+                              left: 20,
+                              right: 20,
+                            ),
+                            child: Text(
+                              "List of doctors",
+                              style: MyTextStyle.myTextStyle(
+                                colors: ConstColor.colorDark60,
+                                size: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          )
+                        : const SizedBox(),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: ConstColor.colorDark60,
+                      ),
+                      title: Text(
+                        mockDataDotors[__]["name"].toString(),
+                        style: MyTextStyle.myTextStyle(
+                            size: 18, fontWeight: FontWeight.w600),
+                      ),
+                      subtitle: Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              mockDataDotors[__]["jobs"].toString(),
+                              style: MyTextStyle.myTextStyle(
+                                  colors: ConstColor.colorDark60, size: 16),
+                            ),
+                            Divider(
+                                thickness: 0.3, color: ConstColor.colorDark60),
+                          ],
                         ),
-                        Divider(thickness: 0.3, color: ConstColor.colorDark60),
-                      ],
+                      ),
+                      trailing: const Icon(Icons.chevron_right),
                     ),
-                  ),
-                  trailing: const Icon(Icons.chevron_right),
+                  ],
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/doctorInner');
+                },
               ),
               itemCount: mockDataDotors.length,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Text("List of doctors", style: MyTextStyle.myTextStyle()),
-          ),
-          Divider(thickness: 0.8, color: ConstColor.colorDark60),
         ],
       ),
     );

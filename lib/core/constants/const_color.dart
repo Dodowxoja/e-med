@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ConstColor {
   static Color colorBlue = const Color(0xff4F8FC0); //4F8FC0
   static Color colorBlueSystem = const Color(0xff007AFF);
-  static Color colorStarYellow = Colors.yellow;
+  static Color colorStarYellow = const Color(0xffEDB447);
+
   static Color colorPurple = Colors.purple;
   static Color colorRed = Colors.red;
   static Color colorFrameBG = Colors.blueGrey;
@@ -16,17 +17,21 @@ class ConstColor {
 
   static Color colorDark100 = Colors.black;
   static Color colorDark90 = const Color(0xFF201D30);
-  static Color colorDark80 = const Color(0xFF393647);
+  static Color colorDark80 = const Color(0xFF393647); //393647
   // static Color colorDark70 = const Color(0xFF6A6975);
   static Color colorDark60 = const Color(0xFF6A6975);
   // static Color colorDark50 = const Color(0xFF6A6975);
   static Color colorDark40 = const Color(0xFF9C9BA3);
   static Color colorDark30 = const Color(0xFFB5B4BA);
-  static Color colorDark20 = const Color(0xFFCDCDD1);
+  static Color colorDark20 = const Color(0xFFCDCDD1); // CFD0D3
   static Color colorDark10 = const Color(0xFFE6E6E8);
   static Color colorDark5 = const Color(0xFFF3F2F4);
-}
 
+  static Color colorSearch = const Color(0xFF767680).withOpacity(0.12);
+  static Color colorSearchText = const Color(0xFF3C3C43).withOpacity(0.6);
+}
+//
+//
 // star yellow
 // purple
 // red

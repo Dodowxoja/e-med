@@ -4,8 +4,8 @@ import 'package:e_med/core/constants/const_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BookAnAppoinment2View extends StatelessWidget {
-  const BookAnAppoinment2View({Key? key}) : super(key: key);
+class DoctorAddAppointmentPage extends StatelessWidget {
+  const DoctorAddAppointmentPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,25 +20,14 @@ class BookAnAppoinment2View extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Divider(
-            color: ConstColor.colorDark60,
-            height: 1,
-          ),
+          Divider(color: ConstColor.colorDark60, height: 1),
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Text(
-              "Appoinment to:",
-              style: MyTextStyle.myTextStyle(),
-            ),
+            child: Text("Appoinment to:", style: MyTextStyle.myTextStyle()),
           ),
           ListTile(
-            leading: CircleAvatar(
-              backgroundColor: ConstColor.colorDark60,
-            ),
-            title: Text(
-              "Mavlonov Boburjon",
-              style: MyTextStyle.myTextStyle(),
-            ),
+            leading: CircleAvatar(backgroundColor: ConstColor.colorDark60),
+            title: Text("Mavlonov Boburjon", style: MyTextStyle.myTextStyle()),
             subtitle: Text(
               "Pediatric pulmonolog at Pediatric hospital №14",
               style: MyTextStyle.myTextStyle(),
@@ -49,15 +38,9 @@ class BookAnAppoinment2View extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Divider(
-                  color: ConstColor.colorDark60,
-                  height: 1,
-                ),
+                Divider(color: ConstColor.colorDark60, height: 1),
                 const SizedBox(height: 30),
-                Text(
-                  "Service type",
-                  style: MyTextStyle.myTextStyle(),
-                ),
+                Text("Service type", style: MyTextStyle.myTextStyle()),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
@@ -72,20 +55,14 @@ class BookAnAppoinment2View extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 25),
-                Text(
-                  "Enter the time",
-                  style: MyTextStyle.myTextStyle(),
-                ),
+                Text("Enter the time", style: MyTextStyle.myTextStyle()),
                 const SizedBox(height: 10),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: 56,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      width: 0.8,
-                      color: ConstColor.colorBlue,
-                    ),
+                    border: Border.all(width: 0.8, color: ConstColor.colorBlue),
                   ),
                   child: Row(
                     children: [
@@ -125,7 +102,7 @@ class BookAnAppoinment2View extends StatelessWidget {
           ),
           child: Text(
             "Confirm",
-            style: MyTextStyle.myTextStyle(),
+            style: MyTextStyle.myTextStyle()
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/doctors');

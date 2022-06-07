@@ -3,8 +3,8 @@ import 'package:e_med/core/components/my_text_style.dart';
 import 'package:e_med/core/constants/const_color.dart';
 import 'package:flutter/material.dart';
 
-class ProfileView extends StatelessWidget {
-  const ProfileView({Key? key}) : super(key: key);
+class DoctorInnerPage extends StatelessWidget {
+  const DoctorInnerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,28 +19,23 @@ class ProfileView extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Divider(
-            height: 0.5,
-            color: ConstColor.colorDark60,
-          ),
+          Divider(height: 0.5, color: ConstColor.colorDark60),
           Expanded(
             flex: 3,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CircleAvatar(
-                  radius: 60,
-                  backgroundColor: Colors.black,
-                ),
+                const CircleAvatar(radius: 60, backgroundColor: Colors.black),
                 const SizedBox(height: 30),
-                Text(
-                  "Mavlonov Boburjon",
-                  style: MyTextStyle.myTextStyle(),
-                ),
-                Text(
-                  "Pediatric Pulmonolog",
-                  style: MyTextStyle.myTextStyle(),
-                ),
+                Text("Mavlonov Boburjon",
+                    style: MyTextStyle.myTextStyle(
+                      size: 20,
+                      fontWeight: FontWeight.w600,
+                      colors: ConstColor.colorDark100,
+                    )),
+                Text("Pediatric Pulmonolog", style: MyTextStyle.myTextStyle(
+                  size: 16,colors: ConstColor.colorDark80
+                )),
               ],
             ),
           ),
@@ -76,7 +71,7 @@ class ProfileView extends StatelessWidget {
                         _icon(),
                         _icon(),
                         _icon(),
-                        Icon(Icons.star, color: ConstColor.colorDark60),
+                        Icon(Icons.star, color: ConstColor.colorDark20),
                       ],
                     ),
                     const SizedBox(height: 25),
@@ -84,17 +79,21 @@ class ProfileView extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         elevation: 0,
                         fixedSize: (const Size(350, 54)),
-                        primary: ConstColor.colorDark60,
+                        primary: ConstColor.colorBlue,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
                       child: Text(
                         "Book an appoinment",
-                        style: MyTextStyle.myTextStyle(),
+                        style: MyTextStyle.myTextStyle(
+                          size: 18,
+                          colors: ConstColor.colorWhite,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/book_an_appoinment2');
+                        Navigator.pushNamed(context, '/doctorAddAppointment');
                       },
                     ),
                   ],
@@ -110,21 +109,24 @@ class ProfileView extends StatelessWidget {
   Icon _icon() {
     return Icon(
       Icons.star,
-      color: ConstColor.colorDark60,
+      color: ConstColor.colorStarYellow,
     );
   }
 
   Text _text1(String text) {
     return Text(
       text,
-      style: MyTextStyle.myTextStyle(),
+      style: MyTextStyle.myTextStyle(size: 16, colors: ConstColor.colorDark60),
     );
   }
 
   Text _text2(String text) {
     return Text(
       text,
-      style: MyTextStyle.myTextStyle(),
+      style: MyTextStyle.myTextStyle(
+          size: 18,
+          colors: ConstColor.colorDark90,
+          fontWeight: FontWeight.w600),
     );
   }
 }

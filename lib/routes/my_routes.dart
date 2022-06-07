@@ -2,6 +2,11 @@ import 'package:e_med/views/auth/view/auth_view.dart';
 import 'package:e_med/views/auth/view/log_in_view.dart';
 import 'package:e_med/views/auth/view/sign_up_view.dart';
 import 'package:e_med/views/cart/view/cart_view.dart';
+import 'package:e_med/views/pages/doctors/book_an_page.dart';
+import 'package:e_med/views/pages/doctors/doctors_view.dart';
+import 'package:e_med/views/pages/doctors/doctor_inner_page.dart';
+import 'package:e_med/views/pages/home/home_view.dart';
+import 'package:e_med/views/pages/treatments/tretments_view.dart';
 import 'package:e_med/views/splash/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +29,19 @@ class MyRoutes {
 
       case '/cart':
         return MaterialPageRoute(builder: (_) => const CartView());
+
+      case '/home':
+        return MaterialPageRoute(builder: (_) => const HomeView());
+
+      case '/treatments':
+        return MaterialPageRoute(builder: (_) => const TreatmentsView());
+
+      case '/doctors':
+        return MaterialPageRoute(builder: (_) => DoctorsView());
+      case '/doctorInner':
+        return MaterialPageRoute(builder: (_) => const DoctorInnerPage());
+      case '/doctorAddAppointment':
+        return MaterialPageRoute(builder: (_) => DoctorAddAppointmentPage());
     }
   }
 }
