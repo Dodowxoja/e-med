@@ -144,11 +144,7 @@ class _TreatmentsViewState extends State<TreatmentsView> {
       child: InkWell(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(name1),
-            Text(name2),
-            Text(name3),
-          ],
+          children: [Text(name1), Text(name2), Text(name3)],
         ),
         onTap: () {},
       ),
@@ -167,12 +163,7 @@ class _TreatmentsViewState extends State<TreatmentsView> {
               children: [
                 Text(name1),
                 Text(name2),
-                Row(
-                  children: [
-                    Text(name3),
-                    Text(name4),
-                  ],
-                ),
+                Row(children: [Text(name3), Text(name4)]),
               ],
             ),
             const Icon(Icons.next_plan),
@@ -196,12 +187,7 @@ class _TreatmentsViewState extends State<TreatmentsView> {
                 Row(
                   children: [Text(name1), const Icon(Icons.arrow_back)],
                 ),
-                Row(
-                  children: [
-                    Text(name2),
-                    Text(name3),
-                  ],
-                )
+                Row(children: [Text(name2), Text(name3)])
               ],
             ),
             const Icon(Icons.next_plan),
