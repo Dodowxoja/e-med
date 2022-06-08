@@ -1,9 +1,11 @@
 import 'package:e_med/core/components/add_component.dart';
+import 'package:e_med/core/components/my_app_bar.dart';
 import 'package:e_med/core/components/my_component.dart';
 import 'package:e_med/core/widgets/my_table_widget.dart';
 import 'package:e_med/core/components/my_text_style.dart';
 import 'package:e_med/core/constants/const_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -18,10 +20,18 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
+      appBar: MyAppBar(
         centerTitle: true,
-        elevation: 0,
+        context: context,
+        preferedSizeHeight: 0.05,
+        leading: Image.asset("assets/images/profile1.png"),
+        title: Image.asset("assets/images/e-med_blue_min.png"),
+        action: [
+          IconButton(
+            icon: SvgPicture.asset("assets/icons/bell.svg"),
+            onPressed: () {},
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -33,7 +43,7 @@ class _HomeViewState extends State<HomeView> {
                   const SizedBox(width: 20),
                   Text(
                     "Today's medications",
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                       size: 16,
                       colors: ConstColor.colorDark60,
                     ),

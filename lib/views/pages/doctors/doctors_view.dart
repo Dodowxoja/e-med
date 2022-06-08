@@ -53,7 +53,7 @@ class DoctorsView extends StatelessWidget {
                   Icon(Icons.search, color: ConstColor.colorSearchText),
                   Text(
                     "Search doctors by name or position",
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                       colors: ConstColor.colorSearchText,
                       size: 17,
                     ),
@@ -81,7 +81,7 @@ class DoctorsView extends StatelessWidget {
                             padding: const EdgeInsets.all(20),
                             child: Text(
                               "Recommended doctors for you",
-                              style: MyTextStyle.myTextStyle(
+                              style: MyTextStyle.textStyle(
                                 colors: ConstColor.colorDark60,
                                 size: 16,
                                 fontWeight: FontWeight.w600,
@@ -98,7 +98,7 @@ class DoctorsView extends StatelessWidget {
                             ),
                             child: Text(
                               "List of doctors",
-                              style: MyTextStyle.myTextStyle(
+                              style: MyTextStyle.textStyle(
                                 colors: ConstColor.colorDark60,
                                 size: 16,
                                 fontWeight: FontWeight.w600,
@@ -112,7 +112,7 @@ class DoctorsView extends StatelessWidget {
                       ),
                       title: Text(
                         mockDataDotors[__]["name"].toString(),
-                        style: MyTextStyle.myTextStyle(
+                        style: MyTextStyle.textStyle(
                             size: 18, fontWeight: FontWeight.w600),
                       ),
                       subtitle: Padding(
@@ -122,7 +122,7 @@ class DoctorsView extends StatelessWidget {
                           children: [
                             Text(
                               mockDataDotors[__]["jobs"].toString(),
-                              style: MyTextStyle.myTextStyle(
+                              style: MyTextStyle.textStyle(
                                   colors: ConstColor.colorDark60, size: 16),
                             ),
                             Divider(

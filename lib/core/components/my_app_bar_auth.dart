@@ -16,7 +16,7 @@ class MyAppBarAuth {
             Icon(Icons.arrow_back_ios, color: colorBlue),
             Text(
               'Back',
-              style: MyTextStyle.myTextStyle(colors: colorBlue),
+              style: MyTextStyle.textStyle(colors: colorBlue),
             ),
           ],
         ),
@@ -24,7 +24,7 @@ class MyAppBarAuth {
           Navigator.pop(context);
         },
       ),
-      title: Text(text, style: MyTextStyle.myTextStyle(size: 18)),
+      title: Text(text, style: MyTextStyle.textStyle(size: 18)),
       centerTitle: true,
       elevation: 0.5,
       backgroundColor: colorWhite,

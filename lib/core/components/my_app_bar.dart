@@ -35,7 +35,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       actions: action,
       backgroundColor: ConstColor.appBarBackgroundColor,
       elevation: elevation ?? 0,
-      titleTextStyle: MyTextStyle.myTextStyle(),
+      titleTextStyle: MyTextStyle.textStyle(),
       bottom: bottom,
       iconTheme: iconTheme,
     );

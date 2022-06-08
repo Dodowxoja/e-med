@@ -28,13 +28,13 @@ class DoctorInnerPage extends StatelessWidget {
                 const CircleAvatar(radius: 60, backgroundColor: Colors.black),
                 const SizedBox(height: 30),
                 Text("Mavlonov Boburjon",
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                       size: 20,
                       fontWeight: FontWeight.w600,
                       colors: ConstColor.colorDark100,
                     )),
                 Text("Pediatric Pulmonolog",
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                         size: 16, colors: ConstColor.colorDark80)),
               ],
             ),
@@ -86,7 +86,7 @@ class DoctorInnerPage extends StatelessWidget {
                       ),
                       child: Text(
                         "Book an appoinment",
-                        style: MyTextStyle.myTextStyle(
+                        style: MyTextStyle.textStyle(
                           size: 18,
                           colors: ConstColor.colorWhite,
                           fontWeight: FontWeight.w600,
@@ -116,14 +116,14 @@ class DoctorInnerPage extends StatelessWidget {
   Text _text1(String text) {
     return Text(
       text,
-      style: MyTextStyle.myTextStyle(size: 16, colors: ConstColor.colorDark60),
+      style: MyTextStyle.textStyle(size: 16, colors: ConstColor.colorDark60),
     );
   }
 
   Text _text2(String text) {
     return Text(
       text,
-      style: MyTextStyle.myTextStyle(
+      style: MyTextStyle.textStyle(
           size: 18,
           colors: ConstColor.colorDark90,
           fontWeight: FontWeight.w600),

@@ -24,14 +24,14 @@ class DoctorAddAppointmentPage extends StatelessWidget {
           Divider(color: ConstColor.colorDark60, height: 1),
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Text("Appoinment to:", style: MyTextStyle.myTextStyle()),
+            child: Text("Appoinment to:", style: MyTextStyle.textStyle()),
           ),
           ListTile(
             leading: CircleAvatar(backgroundColor: ConstColor.colorDark60),
-            title: Text("Mavlonov Boburjon", style: MyTextStyle.myTextStyle()),
+            title: Text("Mavlonov Boburjon", style: MyTextStyle.textStyle()),
             subtitle: Text(
               "Pediatric pulmonolog at Pediatric hospital №14",
-              style: MyTextStyle.myTextStyle(),
+              style: MyTextStyle.textStyle(),
             ),
           ),
           Padding(
@@ -41,7 +41,7 @@ class DoctorAddAppointmentPage extends StatelessWidget {
               children: [
                 Divider(color: ConstColor.colorDark60, height: 1),
                 const SizedBox(height: 30),
-                Text("Service type", style: MyTextStyle.myTextStyle()),
+                Text("Service type", style: MyTextStyle.textStyle()),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
@@ -56,7 +56,7 @@ class DoctorAddAppointmentPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 25),
-                Text("Enter the time", style: MyTextStyle.myTextStyle()),
+                Text("Enter the time", style: MyTextStyle.textStyle()),
                 const SizedBox(height: 10),
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -76,7 +76,7 @@ class DoctorAddAppointmentPage extends StatelessWidget {
                       const SizedBox(width: 5),
                       Text(
                         "DD.MM.YYYY / HH:MM - HH:MM",
-                        style: MyTextStyle.myTextStyle(),
+                        style: MyTextStyle.textStyle(),
                       ),
                       IconButton(
                         icon: const Icon(Icons.arrow_drop_down),
@@ -103,7 +103,7 @@ class DoctorAddAppointmentPage extends StatelessWidget {
           ),
           child: Text(
             "Confirm",
-            style: MyTextStyle.myTextStyle(
+            style: MyTextStyle.textStyle(
               size: 18,
               colors: ConstColor.colorWhite,
               fontWeight: FontWeight.w600,
@@ -129,12 +129,12 @@ class DoctorAddAppointmentPage extends StatelessWidget {
                         SvgPicture.asset('assets/images/union.svg'),
                         Text(
                           'Your have successfully booked an appointment',
-                          style: MyTextStyle.myTextStyle(
+                          style: MyTextStyle.textStyle(
                               size: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
                           'You can go to Mavlonov Boburjon on January 24 at 10:00 - 11:00',
-                          style: MyTextStyle.myTextStyle(),
+                          style: MyTextStyle.textStyle(),
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(

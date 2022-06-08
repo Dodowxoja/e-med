@@ -23,11 +23,11 @@ class AuthView extends StatelessWidget {
                 children: [
                   Text(
                     ConstText.authText1,
-                    style: MyTextStyle.myTextStyle(size: 40),
+                    style: MyTextStyle.textStyle(size: 40),
                   ),
                   Text(
                     ConstText.authText2,
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                       size: 18,
                       colors: ConstColor.colorDark60,
                     ),
@@ -69,7 +69,7 @@ class AuthView extends StatelessWidget {
                     ),
                     child: Text(
                       'Log In',
-                      style: MyTextStyle.myTextStyle(
+                      style: MyTextStyle.textStyle(
                         colors: ConstColor.colorBlue,
                       ),
                     ),

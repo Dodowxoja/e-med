@@ -35,8 +35,8 @@ class LogInView extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.1,
                     child: Text(
                       "Log in to your acoount",
-                      style: MyTextStyle.myTextStyle(
-                          colors: ConstColor.colorDark40),
+                      style:
+                          MyTextStyle.textStyle(colors: ConstColor.colorDark40),
                     ),
                   ),
                   SizedBox(
@@ -46,7 +46,7 @@ class LogInView extends StatelessWidget {
                       children: [
                         Text(
                           "Phone number",
-                          style: MyTextStyle.myTextStyle(
+                          style: MyTextStyle.textStyle(
                               colors: ConstColor.colorDark40),
                         ),
                         const SizedBox(height: 10),
@@ -61,7 +61,7 @@ class LogInView extends StatelessWidget {
                         const SizedBox(height: 25),
                         Text(
                           "Your password",
-                          style: MyTextStyle.myTextStyle(
+                          style: MyTextStyle.textStyle(
                               colors: ConstColor.colorDark40),
                         ),
                         const SizedBox(height: 10),

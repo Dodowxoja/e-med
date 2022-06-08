@@ -17,12 +17,12 @@ class AddComponent {
               children: [
                 Text(
                   "No medications",
-                  style: MyTextStyle.myTextStyle(size: 26),
+                  style: MyTextStyle.textStyle(size: 26),
                 ),
                 Text(
                   'They will appear gere only when doctor adds them to your account',
                   textAlign: TextAlign.center,
-                  style: MyTextStyle.myTextStyle(
+                  style: MyTextStyle.textStyle(
                     size: 14,
                     colors: ConstColor.colorDark60,
                   ),

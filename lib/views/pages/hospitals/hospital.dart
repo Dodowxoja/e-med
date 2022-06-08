@@ -13,7 +13,7 @@ class HospitalPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Hospital',
-          style: MyTextStyle.myTextStyle(size: 20),
+          style: MyTextStyle.textStyle(size: 20),
         ),
         centerTitle: true,
         elevation: 0,

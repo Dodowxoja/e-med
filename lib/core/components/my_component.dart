@@ -32,12 +32,12 @@ class MyComponent {
                 children: [
                   Text(
                     'Patacetomol',
-                    style: MyTextStyle.myTextStyle(size: 18),
+                    style: MyTextStyle.textStyle(size: 18),
                   ),
                   const SizedBox(width: 8),
                   Text(
                     '250 mg',
-                    style: MyTextStyle.myTextStyle(
+                    style: MyTextStyle.textStyle(
                       size: 12,
                       colors: ConstColor.colorDark60,
                     ),
@@ -46,14 +46,14 @@ class MyComponent {
               ),
               Text(
                 '1 pill * 2 times a day',
-                style: MyTextStyle.myTextStyle(
+                style: MyTextStyle.textStyle(
                   size: 14,
                   colors: ConstColor.colorDark60,
                 ),
               ),
               Text(
                 '1 pill taken',
-                style: MyTextStyle.myTextStyle(
+                style: MyTextStyle.textStyle(
                   size: 14,
                   colors: ConstColor.colorDark60,
                 ),

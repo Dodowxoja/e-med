@@ -65,7 +65,7 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
       ),
       child: Text(
         tabName,
-        style: MyTextStyle.myTextStyle(
+        style: MyTextStyle.textStyle(
           size: 12,
           colors: tabController!.index == numIndex
               ? ConstColor.colorBlue
