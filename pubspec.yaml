@@ -41,12 +41,22 @@ dependencies:
   hive_flutter: ^1.1.0
   flutter_svg: ^1.1.0
   table_calendar: ^3.0.6
-  google_maps_flutter: ^2.1.7
+  # google_maps_flutter: ^2.1.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.3
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/medicalIcon.png"
+
+  # flutter_icons:
+  #   android: "launcher_icon"
+  #   ios: false
+  #   image_path: "assets/icon/medicalIcon.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
