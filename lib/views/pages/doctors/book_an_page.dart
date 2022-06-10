@@ -154,7 +154,7 @@ class DoctorAddAppointmentPage extends StatelessWidget {
                               '/cart',
                               (route) => false,
                             );
-                            CartView.currentIndex = 2;
+                            ;
                           },
                           child: Text('Go Home'),
                         ),

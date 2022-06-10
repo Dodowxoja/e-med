@@ -1,3 +1,4 @@
+import 'package:e_med/pages.dart';
 import 'package:e_med/routes/my_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'e-med',
       theme: ThemeData(primarySwatch: Colors.blue),
-      // home: const DoctorInnerPage(),
+      // home: const Map(),
       onGenerateRoute: MyRoutes.instanse.onGenerate,
       initialRoute: '/cart',
     );

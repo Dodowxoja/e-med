@@ -1,16 +1,18 @@
 import 'package:e_med/core/components/my_text_style.dart';
 import 'package:e_med/core/constants/const_color.dart';
+import 'package:e_med/views/cart/cubit/cart_cubit.dart';
+import 'package:e_med/views/cart/state/cart_state.dart';
 import 'package:e_med/views/pages/doctors/doctors_view.dart';
-import 'package:e_med/views/pages/hospitals/hospitals_view.dart';
+import 'package:e_med/views/pages/hospitals/views/hospitals_view.dart';
 import 'package:e_med/views/pages/treatments/tretments_view.dart';
 import 'package:e_med/views/pages/home/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CartView extends StatefulWidget {
   const CartView({Key? key}) : super(key: key);
-
-  static int currentIndex = 0;
+  // static int currentIndex = 0;
   @override
   State<CartView> createState() => _CartViewState();
 }
@@ -26,31 +28,42 @@ class _CartViewState extends State<CartView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: TabBarView(
-        physics: const NeverScrollableScrollPhysics(),
-        controller: tabController,
-        children: [
-          const HomeView(),
-          const TreatmentsView(),
-          DoctorsView(),
-          const HospitalsView(),
-        ],
-      ),
-      bottomNavigationBar: TabBar(
-        indicatorColor: Colors.transparent,
-        controller: tabController,
-        tabs: [
-          myTabCart(0, 'home_cart2', 'Home'),
-          myTabCart(1, 'treatments_cart2', 'Treatments'),
-          myTabCart(2, 'doctors_cart2', 'Doctors'),
-          myTabCart(3, 'hospitals_cart2', 'Hospitals'),
-        ],
-        onTap: (v) {
-          CartView.currentIndex = v;
-          tabController!.index = v;
-          setState(() {});
-        },
+    return 
+    BlocProvider(
+      create: (context) => CartCubit(),
+      child: 
+      Scaffold(
+        body: TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: tabController,
+          children: [
+            const HomeView(),
+            const TreatmentsView(),
+            DoctorsView(),
+            HospitalsView(),
+          ],
+        ),
+        bottomNavigationBar: 
+        BlocBuilder<CartCubit, CartState>(
+          builder: (context, state) {
+            return 
+            TabBar(
+              indicatorColor: Colors.transparent,
+              controller: tabController,
+              tabs: [
+                myTabCart(0, 'home_cart2', 'Home'),
+                myTabCart(1, 'treatments_cart2', 'Treatments'),
+                myTabCart(2, 'doctors_cart2', 'Doctors'),
+                myTabCart(3, 'hospitals_cart2', 'Hospitals'),
+              ],
+              onTap: (v) {
+                context.read<CartCubit>().a(v);
+                // setState(() {});
+              },
+            )
+            ;
+          },
+        ),
       ),
     );
   }
