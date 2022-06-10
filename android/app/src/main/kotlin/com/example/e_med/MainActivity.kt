@@ -1,4 +1,4 @@
-package com.example.e_med
+package com.muhammadxoja.e_medui
 
 import io.flutter.embedding.android.FlutterActivity
 
