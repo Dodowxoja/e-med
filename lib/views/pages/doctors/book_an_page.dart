@@ -5,9 +5,15 @@ import 'package:e_med/views/cart/view/cart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DoctorAddAppointmentPage extends StatelessWidget {
+class DoctorAddAppointmentPage extends StatefulWidget {
   const DoctorAddAppointmentPage({Key? key}) : super(key: key);
 
+  @override
+  State<DoctorAddAppointmentPage> createState() =>
+      _DoctorAddAppointmentPageState();
+}
+
+class _DoctorAddAppointmentPageState extends State<DoctorAddAppointmentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -149,12 +155,9 @@ class DoctorAddAppointmentPage extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.pushNamedAndRemoveUntil(
-                              context,
-                              '/cart',
-                              (route) => false,
-                            );
-                            ;
+                            Navigator.pop(context);
+                            Navigator.pop(context);
+                            Navigator.pop(context);
                           },
                           child: Text('Go Home'),
                         ),

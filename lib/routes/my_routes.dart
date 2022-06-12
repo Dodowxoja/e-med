@@ -26,13 +26,13 @@ class MyRoutes {
         return MaterialPageRoute(builder: (_) => const SignUpView());
       case '/logIn':
         return MaterialPageRoute(builder: (_) => const LogInView());
-
+      //CART
       case '/cart':
-        return MaterialPageRoute(builder: (_) => const CartView());
-
+        return MaterialPageRoute(builder: (_) => CartView());
+      //HOME PAGE
       case '/home':
         return MaterialPageRoute(builder: (_) => const HomeView());
-
+      //TREATMENTS
       case '/treatments':
         return MaterialPageRoute(builder: (_) => const TreatmentsView());
 

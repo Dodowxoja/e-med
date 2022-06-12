@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'e-med',
       theme: ThemeData(primarySwatch: Colors.blue),
-      // home: const Map(),
       onGenerateRoute: MyRoutes.instanse.onGenerate,
       initialRoute: '/cart',
     );
